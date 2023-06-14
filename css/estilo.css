@@ -1,0 +1,27 @@
+body{
+    margin: auto;
+    padding: 0;
+    background-color: bisque;
+}
+.container{
+    margin: 100px auto; 
+    background-color:rgb(100, 100, 233);
+    width: 50%;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center
+}
+.container button{
+    color: aliceblue;
+    width: 100px;
+    height: 30px;
+    background-color: brown;
+    border-radius: 5px;
+}
+.container button:hover{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(187, 84, 84);
+    border-radius: 5px;
+}

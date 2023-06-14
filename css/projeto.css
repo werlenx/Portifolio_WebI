@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a, button {
+    cursor: revert;
+}
+
+ol, ul, menu {
+    list-style: none;
+}
+
+img {
+    max-inline-size: 100%;
+    max-block-size: 100%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+input, textarea {
+    -webkit-user-select: auto;
+}
+
+textarea {
+    white-space: revert;
+}
+
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}
+
+:where(pre) {
+    all: revert;
+}
+
+::placeholder {
+    color: unset;
+}
+
+::marker {
+    content: initial;
+}
+
+:where([hidden]) {
+    display: none;
+}
+
+:where([contenteditable]:not([contenteditable="false"])) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    -webkit-user-select: auto;
+}
+
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
+}
+
+:where(dialog:modal) {
+    all: revert;
+}
+/* ----------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300&family=Lato:wght@100&display=swap');
+
+body{
+    background-color: #D9CDF7;
+}
+.container{
+    margin-top: 150px;
+    background-color: #D9CDF7;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+
+.obj02{
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    font-size: 0.7em;
+}
+.obj02 h2{
+    font-family: 'Crimson Pro', serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    font-size: 2.5em;
+    padding: 10px 0;
+}
+.obj02 button{
+    margin-top: 10px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    background-color: #D9CDF7;
+    border: 1px solid #4b455a;
+    text-transform: uppercase;
+}
+.obj02 button:hover{
+    background-color: #8267c6;
+    border: 1px solid #fafafa;
+}
+#img{
+    float: left;
+}
