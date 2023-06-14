@@ -55,7 +55,7 @@ body{
 /* header */
 #header{
     font-family: Great Vibes, sans-serif;
-    background-image: url('/img/cerejeira.jpg');
+    background-image: url('../img/cerejeira.jpg');
     background-size: cover;
     grid-area: h;
     display: flex;
