@@ -182,7 +182,7 @@ body{
     background-color: #beb2d1;
 }
 #section3 .element02{
-    background-image: url('/img/devimg.jpg');
+    background-image: url('img/devimg.jpg');
     background-size: cover;
     background-color: #0037B3;
     width: 50%;
