@@ -1,0 +1,74 @@
+body{
+    padding: auto;
+    margin: 0;
+    background-color: black;
+}
+.container{
+    margin: 100px 100px;
+    display: grid;
+    grid-template-areas: 
+        "SB obj1 obj2"
+        "SB obj1 obj3"
+        "SB obj4 obj4"
+        "SB obj5 obj7"
+        "SB obj6 obj7"
+        "SB obj8 obj8"
+
+
+    ;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+.sideBar{
+    grid-area: SB;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    padding: 0;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+}
+.sideBar h1{
+    padding-top: 200px;
+}
+.box img{
+    width: 100%;
+    height: 100%;
+}
+.obj01{
+    grid-area: obj1;
+    background-color: rgb(24, 22, 144);
+}
+.obj02{
+    grid-area: obj2;
+    background-color: rgb(67, 141, 116);
+    grid-column-start: 3;
+    grid-column-end: 4;
+    /* grid-row-start: 1;
+    grid-row-start: 2; */
+}
+.obj03{
+    grid-area: obj3;
+    background-color: rgb(36, 70, 58);
+}
+.obj04{
+    grid-area: obj4;
+    background-color: rgb(20, 145, 228);
+}
+.obj05{
+    grid-area: obj5;
+    background-color: rgb(14, 27, 23);
+}
+.obj06{
+    grid-area: obj6;
+    background-color: rgb(3, 4, 4);
+}
+.obj07{
+    grid-area: obj7;
+    background-color: rgb(3, 4, 4);
+}
+.obj08{
+    grid-area: obj8;
+    background-color: rgb(3, 4, 4);
+}
