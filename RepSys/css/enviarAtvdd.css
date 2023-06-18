@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    padding: auto;
+    background-color: bisque;
+}
+.container{
+    display: grid;
+    grid-template-areas: 
+        'cabecalho cabecalho cabecalho cabecalho cabecalho cabecalho cabecalho'
+        'conteudo conteudo conteudo conteudo conteudo conteudo conteudo'
+        'conteudo conteudo conteudo conteudo conteudo conteudo conteudo'
+        'conteudo conteudo conteudo conteudo conteudo conteudo conteudo'
+        'rodape rodape rodape rodape rodape rodape rodape';
+    grid-template-columns: repeat(7, 1fr)
+}
+
+#cabecalho img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+#cabecalho{
+    grid-area: cabecalho;
+    background-color: aquamarine;
+    height: 20vh;
+}
+#conteudo{
+    grid-area:conteudo;
+    background-color: rgb(183, 222, 28);
+    height: 100vh;
+    grid-column-start: 2;
+    grid-column-end: 7;
+    display: flex;
+    flex-direction: column;
+
+}
+#rodape{
+    grid-area: rodape;
+    background-color: rgb(12, 16, 103);
+    height: 20vh;
+}
+.card-login{
+    background-color: aqua;
+    width: 70%;
+    height: 50%;
+    padding: 5rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.menu {
+    background-color: rgb(94, 59, 16);
+    height: 20%;
+    display: inline;
+}
+.menu ul li{
+    display: inline-block;
+    background-color: darkmagenta;
+    padding: 9px;
+}
+.menu ul li :hover{
+    background-color: rgb(229, 68, 229);
+}
+.topo{
+    background-color: red;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.card-sala{
+
+    width: 40%;
+    position: relative;
+    height: 92px;
+    margin: 20px;
+}
+.card-sala div{
+    background-color: chartreuse;
+    height: 65px;
+    border-radius: 5px;
+}
+
+.card-sala p{
+    background-color: rgb(79, 79, 210);
+    padding: 2px 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+}

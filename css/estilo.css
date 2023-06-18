@@ -14,14 +14,14 @@ body{
 }
 .container button{
     color: aliceblue;
-    width: 100px;
-    height: 30px;
+    width: 150px;
+    height: 250px;
     background-color: brown;
     border-radius: 5px;
 }
+
 .container button:hover{
-    width: 100px;
-    height: 30px;
+
     background-color: rgb(187, 84, 84);
     border-radius: 5px;
 }
