@@ -3,16 +3,6 @@ body{
     padding: auto;
     background-color: bisque;
 }
-.container{
-    display: grid;
-    grid-template-areas: 
-        'cabecalho cabecalho cabecalho cabecalho cabecalho cabecalho cabecalho'
-        'conteudo conteudo conteudo conteudo conteudo conteudo conteudo'
-        'conteudo conteudo conteudo conteudo conteudo conteudo conteudo'
-        'conteudo conteudo conteudo conteudo conteudo conteudo conteudo'
-        'rodape rodape rodape rodape rodape rodape rodape';
-    grid-template-columns: repeat(7, 1fr)
-}
 
 #cabecalho img{
     border-radius: 50%;
@@ -35,11 +25,7 @@ body{
     flex-direction: column;
 
 }
-#rodape{
-    grid-area: rodape;
-    background-color: rgb(12, 16, 103);
-    height: 20vh;
-}
+
 .card-login{
     background-color: aqua;
     width: 70%;
@@ -69,15 +55,21 @@ body{
     display: flex;
     justify-content: space-between;
 }
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    justify-content: center;
+    background-color: rgb(38, 0, 255);
+}
 .card-sala{
-
     width: 40%;
     position: relative;
     height: 92px;
     margin: 20px;
 }
 .card-sala div{
-    background-color: chartreuse;
+    background-color: #3A4F56;
     height: 65px;
     border-radius: 5px;
 }

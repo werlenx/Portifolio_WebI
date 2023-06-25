@@ -1,0 +1,82 @@
+.container{
+    display: grid;
+    grid-template-areas: 
+        'conteudo conteudo conteudo conteudo conteudo conteudo conteudo'
+        'conteudo conteudo conteudo conteudo conteudo conteudo conteudo'
+        'conteudo conteudo conteudo conteudo conteudo conteudo conteudo'
+        'rodape rodape rodape rodape rodape rodape rodape';
+}
+#conteudo{
+    grid-area:conteudo;
+    background-color: #CDEDF6;
+    height: 100vh;
+    grid-column-start: 2;
+    grid-column-end: 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* tela de login central */
+.card-login{
+    background-color: #5EB1BF;
+    width: 90%;
+    height: 80%;
+    overflow: hidden;
+    
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.img-perfil {
+    width: 150px;
+    height: 150px;
+}
+.img-perfil img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.card-login form{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
+
+.formulario{
+    position: relative;
+    margin-bottom: 10px;
+    
+}
+.etiqueta{
+    margin-left: 30px;
+    padding: 2px 15px;
+    position: absolute;
+    border-radius: 0.3em;
+    background-color: rgb(43, 98, 98);
+    color: aliceblue;
+    font-size: 1rem;
+    float: initial;
+}
+.entrada{
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px;
+    border: none;
+    border-radius: 0.5em;
+    color: #4ba3b3;
+    font-size: 1.5rem;
+}
+.entrada::placeholder{
+    opacity: 25%;
+}
+.entrada:focus::placeholder {
+    color: transparent;
+  }

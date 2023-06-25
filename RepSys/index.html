@@ -5,25 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script type="module" src="js/scripts.js"></script>
+    
     <title>RepSys-Login</title>
 </head>
 <body>
     <div class="container" id="tamplate-areas">
         <section id="conteudo">
             <div class="card-login">
-                <img src="img/meu-primeiro-gato.jpg" alt="">
+                <div class="img-perfil">
+                    <img src="img/meu-primeiro-gato.jpg" alt="">
+                </div>
+                
 
-                <form>
+                <form id="login-form" action="html/enviarAtividade.html">
                     <div class="formulario">
                         <label class="etiqueta" for="login">Login:</label>
-                        <input class="entrada" type="text" id="login" name="login">
+                        <input 
+                            placeholder="Digite seu login" 
+                            class="entrada" 
+                            type="text" 
+                            id="login" name="login">
                     </div>
                     <div class="formulario">   
                         <label class="etiqueta" for="senha">Senha:</label>
-                        <input class="entrada" type="password" id="senha" name="senha">
+                        <input placeholder="Digite sua senha" class="entrada" type="password" id="password" name="senha">
                     </div>
-
-                    <input class="button" type="submit" value="Enviar">
+                    <div class="formulario">
+                        <input class="bnt" type="submit" value="Entrar">
+                    </div>
+                    
                 </form>
             </div>
         </section>
