@@ -57,6 +57,13 @@ body{
     padding: auto;
     background-color: #CDEDF6;
 }
+body a{
+    text-decoration: none;
+}
+body a:visited{
+    text-decoration: none;
+    color: aliceblue;
+}
 .container{
     display: grid;
     grid-template-areas: 
@@ -89,7 +96,7 @@ body{
 /* cabeçalho */
 #cabecalho{
     grid-area: cabecalho;
-    background-color: #5EB1BF;
+    background-color: #274a50;
     height: 20vh;
     display: flex;
     flex-direction: row;
@@ -106,6 +113,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: aliceblue;
 }
 
 .perfil{
@@ -115,6 +123,7 @@ body{
     overflow: hidden;
     margin-left: 10px;
     display: flex;
+    
 }
 .perfil h2{
     background-color: red;
@@ -164,19 +173,20 @@ body{
 
 }
 #nav ul li{
-    background-color: #91CED9;
+    border-right: 4px solid rgb(239, 71, 10);
+    background-color: #1b2426;
     box-sizing: border-box;
     padding: 10px;
 }
 
 #nav ul{
     display: flex;
-    background-color: #91CED9;
+    background-color: #1b2426;
     box-sizing: border-box;
     height: 100%;  
 }
 #nav ul :hover{
-    background-color: #bbe3e9;
+    background-color: #7a979c;
     cursor: pointer;
 }
 

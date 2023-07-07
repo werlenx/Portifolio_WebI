@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilo.css">
-    <link rel="stylesheet" href="../css/atividdEnv.css">
+    <link rel="stylesheet" href="../css/enviarAtividade2.css">
+    <script src="../js/scripts.js"></script>
     <title>RepSys-Login</title>
 </head>
 <body>
@@ -38,32 +39,36 @@
         <nav id="nav">
             <ul>
                 <li><a>Controle de aula</a></li>
-                <li><a href="enviarAtividade.html">Enviar atividade</a></li>
+                <li><a>Enviar atividade</a></li>
                 <li><a href="atividadesEnv.html">Atividades enviadas</a></li>
             </ul>  
         </nav>
         <section id="conteudo">
-           <div class="turmas">
-                <h3>Turmas</h3>
+            <h2>Turma 01</h2>
+            <div>
                 <form>
-                    <input type="submit" type="button" value="Turma 01">
-                    <input type="submit" type="button" value="Turma 01">
-                    <input type="submit" type="button" value="Turma 01">
-                </form>
+                    <label>
+                      <input type="checkbox" name="aluno" value="aluno1"> Aluno 1
+                    </label>
                 
-           </div>
-           <div class="faltantes">
-                <div>
-                    <h3>Faltantes</h3>
-                    <ul>
-                        <li>aluno 01</li>
-                        <li>aluno 01</li>
-                        <li>aluno 01</li>
-                        <li>aluno 01</li>
-                        <li>aluno 01</li>
-                    </ul>
-                </div>
-           </div>
+                    <label>
+                      <input type="checkbox" name="aluno" value="aluno2"> Aluno 2
+                    </label>
+                
+                    <label>
+                      <input type="checkbox" name="aluno" value="aluno3"> Aluno 3
+                    </label>
+                
+                    <label>
+                      <input type="checkbox" name="aluno" value="aluno4"> Aluno 4
+                    </label>
+                    <div class="bnts">
+                        <input formaction="../html/formPronto.html" class="bnt" type="submit" value="Enviar Atividade">
+                        <input formaction="../html/formPersonalizado.html" class="bnt" type="submit" value="Editar Atividade">
+                    </div>
+                    
+                </form>
+            </div>
         </section>
 
         <footer id="rodape">

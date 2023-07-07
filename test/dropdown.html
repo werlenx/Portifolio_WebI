@@ -1,0 +1,81 @@
+<style>
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+  
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      min-width: 100px;
+      max-height: 200px;
+      overflow: auto;
+      z-index: 1;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      padding: 5px;
+    }
+  
+    .dropdown.active .dropdown-content {
+      display: block;
+    }
+  
+    .dropdown-content a {
+      color: black;
+      padding: 8px 12px;
+      text-decoration: none;
+      display: block;
+    }
+  
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+  
+  <div class="dropdown">
+    <button class="dropbtn">Módulos</button>
+    <div class="dropdown-content">
+      <a href="#">Módulo 1</a>
+      <a href="#">Módulo 2</a>
+      <a href="#">Módulo 3</a>
+      <a href="#">Módulo 4</a>
+      <a href="#">Módulo 5</a>
+      <a href="#">Módulo 6</a>
+      <a href="#">Módulo 7</a>
+      <a href="#">Módulo 8</a>
+      <a href="#">Módulo 9</a>
+      <a href="#">Módulo 10</a>
+      <a href="#">Módulo 11</a>
+      <a href="#">Módulo 12</a>
+      <a href="#">Módulo 13</a>
+      <a href="#">Módulo 14</a>
+      <a href="#">Módulo 15</a>
+      <a href="#">Módulo 16</a>
+      <a href="#">Módulo 17</a>
+      <a href="#">Módulo 18</a>
+    </div>
+  </div>
+  
+  <script>
+    const dropdown = document.querySelector(".dropdown");
+    const dropdownContent = document.querySelector(".dropdown-content");
+    const dropbtn = document.querySelector(".dropbtn");
+  
+    dropdown.addEventListener("click", function() {
+      dropdown.classList.toggle("active");
+    });
+  
+    dropdownContent.addEventListener("click", function(e) {
+      e.stopPropagation();
+      dropbtn.textContent = e.target.textContent;
+      dropdown.classList.remove("active");
+    });
+  
+    document.addEventListener("click", function() {
+      dropdown.classList.remove("active");
+    });
+  
+    // Inicializar o botão com o valor do primeiro item do dropdown
+    dropbtn.textContent = dropdownContent.querySelector("a").textContent;
+  </script>
+  

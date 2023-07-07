@@ -1,0 +1,43 @@
+#conteudo form{
+    display:flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#conteudo label{
+    background-color: #52c3e2;
+    margin: 10px;
+    padding: 7px;
+    border-radius: 0.4rem;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+}
+#conteudo input{
+    padding: 3px;
+}
+#conteudo h2{   
+    margin-top: 35px;
+    margin: 35px 0 20px 0;
+    font-size: 1.5rem;
+}
+#conteudo form{
+    background-color: rgb(45, 52, 55);
+    border-radius: 0.7rem;
+}
+.bnts{
+    display: inline;
+}
+.bnt{
+    height: 30px;
+    width: 30%;
+    border-radius: 0.3rem;
+}
+input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+input[type="checkbox"]:checked {
+    background-color: green;
+}

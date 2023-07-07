@@ -32,13 +32,20 @@
     height: 80px;
     border-radius: 6px;
 }
+.card-sala div:hover{
+    background-color: #3fa3bf;
+    height: 80px;
+    border-radius: 6px;
+    cursor: pointer;
+}
 
 .card-sala p{
-    background-color: #F1F8FA;
+    background-color: #1e3034;
     width: 40%;
     height: 32%;
     padding: 2px 5px;
     border-radius: 7px;
     position: absolute;
     bottom: 0;
+    color: aliceblue;
 }

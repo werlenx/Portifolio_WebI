@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/formPronto.css">
+    <script type="module" src="../js/scripts.js"></script>
+    <title>RepSys-Login</title>
+</head>
+<body>
+    <div class="container" id="tamplate-areas">
+        <header id="cabecalho">
+            <div class="container-perfil">
+                <div class="perfil">
+                    <img src="../img/login.jpg" alt="perfil">
+                </div>
+                <div>
+                    <h2>usuario</h2>
+                </div>
+            </div>
+
+            <div class="pesquisa-container">
+                <form>
+                    <div class="campo pesquisa">
+                        <input type="text" id="pesquisa" name="pesquisa" placeholder="Digite sua pesquisa">
+                    </div>
+                    <div class="campo botao">
+                        <input type="submit" value="Pesquisar">
+                        
+                    </div>
+                </form>
+            </div>
+
+            <div class="notificacao">
+                <img src="../img/notifications_FILL1_wght400_GRAD0_opsz48.svg" alt="">
+            </div>
+        </header>
+        <nav id="nav">
+            <ul>
+                <li><a>Controle de aula</a></li>
+                <li><a>Enviar atividade</a></li>
+                <li><a href="atividadesEnv.html">Atividades enviadas</a></li>
+            </ul>  
+        </nav>
+        <section id="conteudo">
+            <header class="topo">
+                <h2>Atividades</h2>
+                <div>
+                    <input onclick="window.location.href='../html/atividadesEnv.html'" class="button" type="submit" value="Enviar">
+                    <input class="button" type="submit" value="Personalizar">
+                    <div class="dropdown">
+                        <button class="dropbtn">Módulos</button>
+                        <div class="dropdown-content">
+                        <a href="#">Módulo 1</a>
+                        <a href="#">Módulo 2</a>
+                        <a href="#">Módulo 3</a>
+                        <a href="#">Módulo 4</a>
+                        <a href="#">Módulo 5</a>
+                        <a href="#">Módulo 6</a>
+                        <a href="#">Módulo 7</a>
+                        <a href="#">Módulo 8</a>
+                        <a href="#">Módulo 9</a>
+                        <a href="#">Módulo 10</a>
+                        <a href="#">Módulo 11</a>
+                        <a href="#">Módulo 12</a>
+                        <a href="#">Módulo 13</a>
+                        <a href="#">Módulo 14</a>
+                        <a href="#">Módulo 15</a>
+                        <a href="#">Módulo 16</a>
+                        <a href="#">Módulo 17</a>
+                        <a href="#">Módulo 18</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </header>
+            <div class="card-container">
+                <form action="">
+                    <div class="card">
+                        <input type="radio" name="questao">
+                        <p>Q1 - poque é assim?</p>
+                        <p>Q2 - poque é assim?</p>
+                        <p>Q3 - poque é assim?</p>
+                    </div>
+                    <div class="card">
+                        <input type="radio" name="questao">
+                        <p>Q1 - poque é assim?</p>
+                        <p>Q2 - poque é assim?</p>
+                        <p>Q3 - poque é assim?</p>
+                    </div>
+                    <div class="card">
+                        <input type="radio" name="questao">
+                        <p>Q1 - poque é assim?</p>
+                        <p>Q2 - poque é assim?</p>
+                        <p>Q3 - poque é assim?</p>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <footer id="rodape">
+            <h1>rodape</h1>
+        </footer>
+    </div>
+</body>
+</html>
