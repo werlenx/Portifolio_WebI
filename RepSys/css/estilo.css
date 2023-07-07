@@ -22,6 +22,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -50,6 +51,11 @@ table {
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400&display=swap');
 body{
     font-family: 'Inter', sans-serif;
+}
+body{
+    margin: 0;
+    padding: auto;
+    background-color: #CDEDF6;
 }
 .container{
     display: grid;
@@ -87,17 +93,15 @@ body{
     height: 20vh;
     display: flex;
     flex-direction: row;
-    
-    background-color: blueviolet;
+    align-items: center;
+    justify-content: space-between;
 
 }
 .notificacao{
-
-    background-color: chartreuse;
     width: fit-content;
+    margin: 30px;
 }
 .container-perfil{
-    background-color: brown;
     width: 150px;
     display: flex;
     flex-direction: column;
@@ -105,7 +109,6 @@ body{
 }
 
 .perfil{
-    background-color: crimson;
     width: 90px;
     height: 90px;
     border-radius: 50%;
@@ -116,6 +119,43 @@ body{
 .perfil h2{
     background-color: red;
 }
+.pesquisa-container{
+    width: 50%;
+    height: 35%;
+    align-items: center;
+}
+.pesquisa-container form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.campo{
+    width: 100%;
+    height: 100%;
+}
+.pesquisa{
+    width: 70%;
+}
+.botao{
+    width: 30%;
+}
+.pesquisa input{
+    width: 100%;
+    box-sizing: border-box;
+}
+.botao input{
+    margin: 0;
+    width: 100%;
+}
+.campo input{
+    height: 40px;
+    border-radius: 0.5rem;
+    border: solid 2px #377984;
+}
+.campo input:focus{
+    border: solid 2px #dce6e8;
+}
+
 
 #nav {
     color: aliceblue;
