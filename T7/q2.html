@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiplicação de Array</title>
+  </head>
+  <body>
+    <script>
+      function lerArray() {
+        let arrayA = [];
+        for (let i = 0; i < 10; i++) {
+          let numero = parseFloat(prompt(`Digite o número ${i + 1} do array:`));
+          arrayA.push(numero);
+        }
+        return arrayA;
+      }
+
+      function lerX() {
+        let x = parseFloat(prompt("Digite o valor de X:"));
+        return x;
+      }
+
+      function multiplicarPorX(arrayA, x) {
+        let arrayM = [];
+        for (let i = 0; i < arrayA.length; i++) {
+          arrayM.push(arrayA[i] * x);
+        }
+        return arrayM;
+      }
+
+      function mostrarArrayM(arrayM) {
+        document.write("<h2>Array M (Resultado da multiplicação):</h2>");
+        document.write("<p>" + arrayM.join(", ") + "</p>");
+      }
+
+      let arrayA = lerArray();
+      let x = lerX();
+      let arrayM = multiplicarPorX(arrayA, x);
+      mostrarArrayM(arrayM);
+    </script>
+  </body>
+</html>

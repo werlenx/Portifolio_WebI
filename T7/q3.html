@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Temperaturas da Semana</title>
+  </head>
+  <body>
+    <script>
+      function lerTemperaturas() {
+        let temperaturas = [];
+        for (let i = 0; i < 7; i++) {
+          let temperatura = parseFloat(
+            prompt(`Digite a temperatura média do dia ${i + 1}:`)
+          );
+          temperaturas.push(temperatura);
+        }
+        return temperaturas;
+      }
+
+      function encontrarMenorTemperatura(temperaturas) {
+        let menorTemperatura = temperaturas[0];
+        for (let i = 1; i < temperaturas.length; i++) {
+          if (temperaturas[i] < menorTemperatura) {
+            menorTemperatura = temperaturas[i];
+          }
+        }
+        return menorTemperatura;
+      }
+
+      function encontrarMaiorTemperatura(temperaturas) {
+        let maiorTemperatura = temperaturas[0];
+        for (let i = 1; i < temperaturas.length; i++) {
+          if (temperaturas[i] > maiorTemperatura) {
+            maiorTemperatura = temperaturas[i];
+          }
+        }
+        return maiorTemperatura;
+      }
+
+      function mostrarResultados(temperaturas, menor, maior) {
+        document.write("<h2>Temperaturas da Semana:</h2>");
+        document.write("<p>" + temperaturas.join(", ") + "</p>");
+        document.write("<h2>Menor temperatura da semana: " + menor + "</h2>");
+        document.write("<h2>Maior temperatura da semana: " + maior + "</h2>");
+      }
+
+      let temperaturasSemana = lerTemperaturas();
+      let menorTemperatura = encontrarMenorTemperatura(temperaturasSemana);
+      let maiorTemperatura = encontrarMaiorTemperatura(temperaturasSemana);
+      mostrarResultados(temperaturasSemana, menorTemperatura, maiorTemperatura);
+    </script>
+  </body>
+</html>
