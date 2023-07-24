@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registro de Alunos e Notas</title>
+  </head>
+  <body>
+    <script>
+      let nomes = [];
+      let notas = [];
+
+      function lerAlunos() {
+        for (let i = 0; i < 5; i++) {
+          let nome = prompt(`Digite o nome do aluno ${i + 1}:`);
+          nomes.push(nome);
+
+          let nota = parseFloat(prompt(`Digite a nota do aluno ${i + 1}:`));
+          notas.push(nota);
+        }
+      }
+
+      function mostrarAlunos() {
+        document.write("<h2>Alunos e Notas:</h2>");
+        for (let i = 0; i < 5; i++) {
+          document.write(
+            `<p>Aluno ${i + 1}: ${nomes[i]}, Nota: ${notas[i]}</p>`
+          );
+        }
+      }
+
+      function calcularMedia() {
+        let somaNotas = 0;
+        for (let i = 0; i < 5; i++) {
+          somaNotas += notas[i];
+        }
+
+        let media = somaNotas / 5;
+        return media;
+      }
+
+      lerAlunos();
+      mostrarAlunos();
+
+      let mediaTotal = calcularMedia();
+      document.write(`<h2>Média Total: ${mediaTotal.toFixed(2)}</h2>`);
+    </script>
+  </body>
+</html>

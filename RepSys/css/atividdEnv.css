@@ -11,6 +11,7 @@
 }
 #conteudo{
     flex-direction: row;
+
 }
 #conteudo h3{
    font-size: 1.5rem;
@@ -64,4 +65,29 @@
 }
 .faltantes ul{
     margin-top: 30px;
+}
+@media (max-width: 768px){
+    #conteudo{
+        flex-direction: column;
+    }
+    .turmas{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding: 25px;
+    }
+    #conteudo{
+        flex-direction: column;
+        grid-column-start: 1;
+        grid-column-end: 8;
+    }
+    .faltantes{
+        box-sizing: border-box;
+        margin: 20px;
+        padding: 25px;
+        width: 90%;
+        border-radius: 0.7rem;
+        background-color: rgb(45, 52, 55);
+    }
 }

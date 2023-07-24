@@ -1,5 +1,4 @@
 
-
 .topo{
     height: 10vh;
     width: 100%;
@@ -48,4 +47,20 @@
     position: absolute;
     bottom: 0;
     color: aliceblue;
+}
+
+@media (max-width: 768px){
+    .card-sala{
+        width: 100%;
+        position: relative;
+        margin: 10px 0px;
+        height: 95px;
+    
+    }
+    .card-sala div{
+        background-color: #28697b;
+        height: 80px;
+        border-radius: 6px;
+    }
+
 }

@@ -95,3 +95,21 @@ h1{
   .dropdown-content a:hover {
     background-color: #f0f0f0;
   }
+  @media (max-width: 768px){
+    #conteudo{
+        flex-direction: column;
+    }
+
+    #conteudo{
+        flex-direction: column;
+        grid-column-start: 1;
+        grid-column-end: 8;
+    }
+    .card{
+        display: flex; 
+        align-items: center;
+        width: 90%;
+        color: aliceblue;
+    }
+
+}
