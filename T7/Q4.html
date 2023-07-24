@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Classificação de Clientes do Banco</title>
+  </head>
+  <body>
+    <script>
+      function lerClientes() {
+        let clientes = [];
+        while (true) {
+          let nome = prompt(
+            "Digite o nome do cliente (ou 'Fim' para encerrar):"
+          );
+          if (nome.toLowerCase() === "fim") {
+            break;
+          }
+
+          let idade = parseInt(prompt(`Digite a idade de ${nome}:`));
+          clientes.push({ nome: nome, idade: idade });
+        }
+        return clientes;
+      }
+
+      function classificarClientes(clientes) {
+        let preferencial = [];
+        let filaNormal = [];
+
+        for (let i = 0; i < clientes.length; i++) {
+          if (clientes[i].idade >= 60) {
+            preferencial.push(clientes[i]);
+          } else {
+            filaNormal.push(clientes[i]);
+          }
+        }
+
+        return { preferencial: preferencial, filaNormal: filaNormal };
+      }
+
+      function mostrarClientes(classificacao) {
+        document.write("<h2>Clientes Preferenciais:</h2>");
+        for (let i = 0; i < classificacao.preferencial.length; i++) {
+          document.write(
+            `<p>Nome: ${classificacao.preferencial[i].nome}, Idade: ${classificacao.preferencial[i].idade}</p>`
+          );
+        }
+
+        document.write("<h2>Clientes Fila Normal:</h2>");
+        for (let i = 0; i < classificacao.filaNormal.length; i++) {
+          document.write(
+            `<p>Nome: ${classificacao.filaNormal[i].nome}, Idade: ${classificacao.filaNormal[i].idade}</p>`
+          );
+        }
+      }
+
+      let clientes = lerClientes();
+      let classificacao = classificarClientes(clientes);
+      mostrarClientes(classificacao);
+    </script>
+  </body>
+</html>

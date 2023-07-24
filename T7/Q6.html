@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Conversor de Moeda</title>
+  </head>
+  <body>
+    <script>
+      // Função para converter o valor em reais para a moeda selecionada
+      function converterMoeda(valorReal, tipoMoeda) {
+        let cotacaoDolar = 5.5;
+        let cotacaoEuro = 7.0;
+
+        if (tipoMoeda === "d") {
+          return valorReal / cotacaoDolar;
+        } else if (tipoMoeda === "e") {
+          return valorReal / cotacaoEuro;
+        } else {
+          return "Tipo de moeda inválido. Use 'd' para dólar e 'e' para euro.";
+        }
+      }
+
+      // Exemplo de uso da função
+      let valorEmReais = parseFloat(prompt("Digite o valor em reais:"));
+      let tipoMoeda = prompt("Digite 'd' para dólar ou 'e' para euro:");
+
+      let valorConvertido = converterMoeda(valorEmReais, tipoMoeda);
+
+      if (typeof valorConvertido === "number") {
+        document.write("<h2>Valor Convertido:</h2>");
+        document.write(
+          `<p>R$ ${valorEmReais.toFixed(
+            2
+          )} equivale a ${valorConvertido.toFixed(2)} ${
+            tipoMoeda === "d" ? "dólares" : "euros"
+          }.</p>`
+        );
+      } else {
+        document.write("<h2>Erro:</h2>");
+        document.write(`<p>${valorConvertido}</p>`);
+      }
+    </script>
+  </body>
+</html>

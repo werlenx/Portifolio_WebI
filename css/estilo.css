@@ -1,27 +1,37 @@
 body{
+    font-family: Arial, Helvetica, sans-serif;
     margin: auto;
     padding: 0;
-    background-color: bisque;
+    background-color: #a7c0f9;
+    color: #cfdaf5;
 }
 .container{
     margin: 100px auto; 
-    background-color:rgb(100, 100, 233);
-    width: 50%;
+    background-color:#4a1c38;
+    width: 80%;
     align-items: center;
     padding: 20px;
     border-radius: 15px;
     text-align: center
 }
+.link{
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #cfdaf5;
+}
+a:visited{
+    color: #cfdaf5;
+}
 .container button{
     color: aliceblue;
     width: 150px;
-    height: 250px;
-    background-color: brown;
-    border-radius: 5px;
+    height: 50px;
+    background-color: #b51144;
+    border: 2px solid #e45885;
+    border-radius: 0.8rem;
 }
 
 .container button:hover{
-
     background-color: rgb(187, 84, 84);
-    border-radius: 5px;
 }

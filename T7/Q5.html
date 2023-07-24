@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculadora de Idade</title>
+  </head>
+  <body>
+    <script>
+      function calcularIdade(anoNascimento, anoAtual) {
+        let idade = anoAtual - anoNascimento;
+        return idade;
+      }
+
+      let anoNascimento = parseInt(prompt("Digite o ano de nascimento:"));
+      let anoAtual = new Date().getFullYear();
+      let idadePessoa = calcularIdade(anoNascimento, anoAtual);
+
+      document.write("<h2>Idade da Pessoa:</h2>");
+      document.write(`<p>A pessoa tem ${idadePessoa} anos.</p>`);
+    </script>
+  </body>
+</html>
