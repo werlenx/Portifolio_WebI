@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consultório Odontológico</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      #painel {
+        margin-top: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Consultório Odontológico</h1>
+    <form id="formAtendimento">
+      <label for="nome">Nome do Paciente:</label>
+      <input type="text" id="nome" required /><br />
+
+      <label for="procedimento">Procedimento Realizado:</label>
+      <input type="text" id="procedimento" required /><br />
+
+      <button type="submit">Registrar Atendimento</button>
+    </form>
+
+    <div id="painel"></div>
+
+    <script>
+      const form = document.getElementById("formAtendimento");
+      const painel = document.getElementById("painel");
+      const atendimentos = [];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const nome = form.nome.value;
+        const procedimento = form.procedimento.value;
+
+        const atendimento = {
+          nome: nome,
+          procedimento: procedimento,
+        };
+
+        atendimentos.push(atendimento);
+        atualizarPainel();
+        form.reset();
+      });
+
+      function atualizarPainel() {
+        painel.innerHTML = "";
+
+        for (const atendimento of atendimentos) {
+          const divAtendimento = document.createElement("div");
+          divAtendimento.innerHTML = `Nome: ${atendimento.nome}<br>
+          Procedimento: ${atendimento.procedimento}`;
+          painel.appendChild(divAtendimento);
+        }
+      }
+    </script>
+  </body>
+</html>

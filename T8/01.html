@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="quilo">Preço por Quilograma:</label>
+      <input type="number" id="quilo" name="quilo" required />
+
+      <label for="consumo">Consumo em Gramas:</label>
+      <input type="number" id="consumo" name="consumo" required />
+
+      <button type="submit">Calcular</button>
+    </form>
+
+    <h3></h3>
+
+    <script>
+      const form = document.querySelector("form");
+      const response = document.querySelector("h3");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const precoKg = Number(form.quilo.value);
+        const consumo = Number(form.consumo.value);
+
+        const valorAPagar = (precoKg / 1000) * consumo;
+
+        response.innerHTML = `Valor a pagar: R$ ${valorAPagar.toFixed(2)}`;
+      });
+    </script>
+  </body>
+</html>

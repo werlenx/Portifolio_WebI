@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contas a Pagar</title>
+  </head>
+  <body>
+    <h1>Contas a Pagar</h1>
+    <p>Insira os valores das contas a serem pagas</p>
+    <input type="number" id="valorConta" />
+    <button onclick="adicionarConta()">Adicionar Conta</button>
+    <h2>Contas Adicionadas:</h2>
+    <ul id="listaContas"></ul>
+    <h3>Total de Contas: <span id="contador"></span></h3>
+    <h3>Total a Pagar: R$ <span id="acumulador"></span></h3>
+
+    <script>
+      const listaContas = document.getElementById("listaContas");
+      const contadorElement = document.getElementById("contador");
+      const acumuladorElement = document.getElementById("acumulador");
+      const inputValorConta = document.getElementById("valorConta");
+
+      let contador = 0;
+      let acumulador = 0;
+
+      function adicionarConta() {
+        const valorConta = Number(inputValorConta.value);
+
+        contador++;
+        acumulador += valorConta;
+
+        const listItem = document.createElement("li");
+        listItem.textContent = `Conta ${contador}: R$ ${valorConta.toFixed(2)}`;
+        listaContas.appendChild(listItem);
+
+        contadorElement.textContent = contador;
+        acumuladorElement.textContent = acumulador.toFixed(2);
+
+        inputValorConta.value = "";
+        inputValorConta.focus();
+      }
+    </script>
+  </body>
+</html>

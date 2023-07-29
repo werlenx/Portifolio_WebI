@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <form>
+      <label for="raiz">Número</label>
+      <input type="number" id="raiz" name="raiz" required />
+
+      <button type="submit">Calcular</button>
+    </form>
+
+    <h3></h3>
+
+    <script>
+      const form = document.querySelector("form");
+      const response = document.querySelector("h3");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const n = Number(form.raiz.value);
+
+        const calc = Math.sqrt(n);
+
+        response.innerHTML = `A raiz quadrada é: ${calc.toFixed(2)}`;
+      });
+    </script>
+  </body>
+</html>
